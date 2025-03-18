@@ -41,7 +41,9 @@ Contient toutes les fonctions qui exécutent les actions liées aux commandes vo
 3. ````requirements.txt```` :
 Liste toutes les dépendances nécessaires pour faire fonctionner le projet.
 
-🛠️ Dépendances
+<hr>
+
+## 🛠️ Dépendances
 
 * **speechrecognition** : Utilisé pour la reconnaissance vocale.
 * **pyttsx3** : Utilisé pour la conversion du texte en voix (synthèse vocale).

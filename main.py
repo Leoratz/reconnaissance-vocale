@@ -13,8 +13,6 @@ def recognize_commands():
     with sr.Microphone() as source:
         print("Dites quelque chose...")
         audio = r.listen(source)
-        speak("Dites quelque chose...")
-
         try:
             command = r.recognize_google(audio, language="fr-FR").lower()
             print(f"Commande reconnue : {command}")

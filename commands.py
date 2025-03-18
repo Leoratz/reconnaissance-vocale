@@ -3,8 +3,9 @@ import datetime
 import platform
 import webbrowser
 
-def open_browser():
-    webbrowser.open('https://www.google.com')
+def search_browser(search):
+    search_url = f'https://www.google.com/search?q={search}'
+    webbrowser.open(search_url)
 
 def tell_date():
     today = datetime.datetime.now().strftime('%Y-%m-%d')

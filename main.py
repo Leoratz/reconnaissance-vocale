@@ -28,23 +28,31 @@ def recognize_commands():
 
 def process_command(command):
     if "ouvre navigateur" in command:
-        speak("Ouverture du navigateur")
-        commands.open_browser()
+        speak("Que voulez-vous rechercher ?")
+        query = recognize_commands()
+        if query:
+            speak(f"Recherche de {query} sur Google")
+            commands.search_browser(query)
+        else:
+            speak("Recherche annulée")
 
-    elif "donne moi l'heure" in command:
+    elif "heure" in command:
         time = commands.tell_time()
         speak(time)
+        print(time)
 
-    elif "donne moi la date" in command:
+    elif "date" in command:
         date = commands.tell_date()
         speak(date)
+        print(date)
 
     elif "verrouille" in command:
         speak("Verrouillage de l'écran")
         commands.lock()
 
-    else:
+    else:   
         speak("Commande non reconnue")
+        print("Commande non reconnue")
 
 while True:
     cmd = recognize_commands()	
